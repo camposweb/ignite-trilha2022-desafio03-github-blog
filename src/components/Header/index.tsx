@@ -1,7 +1,13 @@
+import { NavLink } from 'react-router-dom'
+import { HeaderContainer } from './styles'
+import logo from '../../assets/logo.svg'
+
 export function Header() {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <HeaderContainer>
+      <NavLink to={'/'} title="Home">
+        <img src={logo} alt="Logo" />
+      </NavLink>
+    </HeaderContainer>
   )
 }
