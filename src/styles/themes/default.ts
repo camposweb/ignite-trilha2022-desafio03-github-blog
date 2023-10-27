@@ -17,6 +17,7 @@ export const defaultTheme = {
     textM: '1rem',
     textL: '1.5rem',
     titleS: '1.125rem',
+    titleM: '1.25rem',
     titleL: '1.5rem',
     componentsLink: '0.75rem',
   },

@@ -8,6 +8,7 @@ export const HomeContainer = styled.main`
   max-width: 54rem;
   //height: 13.25rem;
   margin-top: -5.7rem;
+  margin-bottom: 14.62rem;
 
   font-family: 'Nunito', sans-serif;
   font-style: normal;
