@@ -19,6 +19,8 @@ declare module 'styled-components' {
       textS: string
       textM: string
       textL: string
+      titleS: string
+      titleL: string
       componentsLink: string
     }
   }

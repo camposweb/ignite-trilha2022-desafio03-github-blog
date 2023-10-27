@@ -23,10 +23,10 @@ export const ProfileImg = styled.img`
 `
 
 export const ProfileInfo = styled.div`
-  width: 38.25rem;
+  max-width: 38.25rem;
   display: flex;
   flex-direction: column;
-  font-family: 'Nunito', sans-serif;
+  //font-family: 'Nunito', sans-serif;
   //justify-content: space-between;
 `
 
@@ -36,24 +36,27 @@ export const ProfileTitle = styled.section`
   margin: 0.5rem 0rem;
 
   h1 {
-    font-style: normal;
     font-weight: 700;
     line-height: 1.95rem;
-    font-size: ${({ theme }) => theme.fonts.textL};
+    font-size: ${({ theme }) => theme.fonts.titleL};
     color: ${({ theme }) => theme.colors.baseTitle};
   }
 
   a {
     display: flex;
-    align-items: center;
     gap: 0.5rem;
     text-decoration: none;
+    width: 4.1875rem;
+    height: 1.1875rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-style: normal;
     line-height: 1.2rem;
     font-size: ${({ theme }) => theme.fonts.componentsLink};
     color: ${({ theme }) => theme.colors.blue};
+
+    &:hover {
+      border-bottom: 0.063rem solid ${({ theme }) => theme.colors.blue};
+    }
   }
 `
 
@@ -61,8 +64,6 @@ export const ProfileBio = styled.section`
   display: flex;
 
   p {
-    font-style: normal;
-    font-weight: 400;
     line-height: 1.6rem;
     font-size: ${({ theme }) => theme.fonts.textM};
     color: ${({ theme }) => theme.colors.baseText};
@@ -77,9 +78,6 @@ export const ProfileData = styled.section`
   span {
     display: flex;
     align-items: center;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6rem;
     color: ${({ theme }) => theme.colors.baseSubtitle};
     font-size: ${({ theme }) => theme.fonts.textM};
     gap: 0.5rem;
