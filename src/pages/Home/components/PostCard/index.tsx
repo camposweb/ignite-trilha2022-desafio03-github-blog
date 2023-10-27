@@ -1,8 +1,8 @@
 import { CardContainer, CardContent, CardDescription, CardInfo } from './styles'
 
-export function Card() {
+export function PostCard() {
   return (
-    <CardContainer to={'#'}>
+    <CardContainer to={'/post'}>
       <CardContent>
         <CardInfo>
           <h3>JavaScript data types and data structures</h3>

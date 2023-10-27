@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const CardContainer = styled(Link)`
+export const CardContainer = styled(NavLink)`
   display: flex;
   background: ${({ theme }) => theme.colors.basePost};
   border-radius: 0.625rem;

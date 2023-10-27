@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CardListContainer = styled.div`
+export const PostCardListContainer = styled.div`
   display: grid;
   width: 100%;
   margin-top: 3rem;
