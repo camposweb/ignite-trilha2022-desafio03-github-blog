@@ -3,6 +3,7 @@ import 'styled-components'
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
+      blue: string
       baseTitle: string
       baseSubtitle: string
       baseText: string
@@ -13,6 +14,12 @@ declare module 'styled-components' {
       baseProfile: string
       baseBackground: string
       baseInput: string
+    }
+    fonts: {
+      textS: string
+      textM: string
+      textL: string
+      componentsLink: string
     }
   }
 }
