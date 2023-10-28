@@ -7,4 +7,8 @@ export const PostCardListContainer = styled.div`
   place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
   grid-gap: 2rem 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `

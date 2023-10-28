@@ -24,4 +24,15 @@ body {
 		font-family: 400 1rem 'Nunito', sans-serif;
 	}
 
+	@media (max-width: 768px) {
+	html {
+		font-size: 87.5%;
+	}
+
+	@media (max-width: 834px) {
+	html {
+		font-size: 87.5%;
+	}
+}
+
 `

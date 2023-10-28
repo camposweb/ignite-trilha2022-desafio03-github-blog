@@ -6,20 +6,12 @@ export const CardContainer = styled(NavLink)`
   background: ${({ theme }) => theme.colors.basePost};
   border-radius: 0.625rem;
   text-decoration: none;
+  transition: 0.2s;
 
   &:hover {
-    //border: 0.125rem solid ${({ theme }) => theme.colors.baseLabel};
     box-shadow: 0 0 0 0.125rem ${({ theme }) => theme.colors.baseLabel};
   }
-
-  /* a {
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-  } */
 `
-
-// export const CardContent = styled(Link)``
 
 export const CardContent = styled.div`
   display: flex;
@@ -30,7 +22,6 @@ export const CardContent = styled.div`
 export const CardInfo = styled.section`
   display: flex;
   justify-content: space-between;
-  //align-items: flex-start;
   gap: 1rem;
 
   h3 {

@@ -41,7 +41,8 @@ export function Post() {
               Há 1 dia
             </span>
             <span>
-              <FontAwesomeIcon icon={faComment} />5 comentários
+              <FontAwesomeIcon icon={faComment} />
+              55 comentários
             </span>
           </section>
         </PostInfo>

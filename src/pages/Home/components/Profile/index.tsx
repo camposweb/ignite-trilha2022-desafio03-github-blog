@@ -26,9 +26,7 @@ export function Profile() {
             <h1>Leandro Campos</h1>
             <NavLink to={'#'}>
               github
-              <span>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </span>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </NavLink>
           </ProfileTitle>
           <ProfileBio>

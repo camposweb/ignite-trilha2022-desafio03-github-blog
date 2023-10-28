@@ -6,7 +6,6 @@ export const PostContainer = styled.main`
   flex-direction: column;
   justify-content: center;
   max-width: 54rem;
-  //height: 13.25rem;
   margin-top: -5.7rem;
   margin-bottom: 14.62rem;
 
@@ -14,6 +13,14 @@ export const PostContainer = styled.main`
   font-style: normal;
   font-weight: 400;
   line-height: 1.6rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 834px) {
+    padding: 0 3rem;
+  }
 `
 
 export const PostInfoContainer = styled.div`
@@ -24,23 +31,31 @@ export const PostInfoContainer = styled.div`
   background: ${({ theme }) => theme.colors.baseProfile};
   border-radius: 0.625rem;
   padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `
 
 export const PostInfoNav = styled.section`
   display: flex;
-  width: 100%;
   justify-content: space-between;
 
   a {
     display: flex;
     gap: 0.5rem;
-    align-items: center;
     text-decoration: none;
     font-weight: 700;
     line-height: 1.2rem;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.blue};
     font-size: ${({ theme }) => theme.fonts.componentsLink};
+    transition: 0.2s;
+
+    &:hover {
+      //border-bottom: 0.063rem solid ${({ theme }) => theme.colors.blue};
+      box-shadow: 0 1px 0 0 ${({ theme }) => theme.colors.blue};
+    }
   }
 `
 
@@ -55,6 +70,7 @@ export const PostInfo = styled.section`
 
   section {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 0.5rem;
 
@@ -72,13 +88,18 @@ export const PostInfo = styled.section`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    section {
+      gap: 1rem;
+    }
+  }
 `
 
 export const PostContent = styled.article`
   display: flex;
   flex-direction: column;
   padding: 2.5rem 2rem;
-  //margin-bottom: 8rem;
 
   section {
     p {
