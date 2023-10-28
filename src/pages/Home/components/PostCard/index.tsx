@@ -1,18 +1,27 @@
 import { CardContainer, CardContent, CardDescription, CardInfo } from './styles'
 
-export function PostCard() {
+interface IssuesProps {
+  id?: number
+  title: string
+  body: string
+}
+
+interface CardProps {
+  cards: IssuesProps
+}
+
+export function PostCard({ cards }: CardProps) {
   return (
     <CardContainer to={'/post'}>
       <CardContent>
         <CardInfo>
-          <h3>JavaScript data types and data structures</h3>
+          <h3>{`${cards.title.substring(0, 70)}...`}</h3>
           <span>Há 1 dia</span>
         </CardInfo>
-        <CardDescription>
-          Programming languages all have built-in data structures, but these
-          often differ from one language to another. This article attempts to
-          list the built-in data structures available in...
-        </CardDescription>
+        <CardDescription>{`${cards.body.substring(
+          0,
+          190,
+        )}...`}</CardDescription>
       </CardContent>
     </CardContainer>
   )

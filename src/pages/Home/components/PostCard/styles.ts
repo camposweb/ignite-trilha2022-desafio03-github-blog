@@ -2,7 +2,10 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const CardContainer = styled(NavLink)`
+  //width: 26rem;
+  min-height: 16.25rem;
   display: flex;
+  padding: 2rem;
   background: ${({ theme }) => theme.colors.basePost};
   border-radius: 0.625rem;
   text-decoration: none;
@@ -15,7 +18,7 @@ export const CardContainer = styled(NavLink)`
 
 export const CardContent = styled.div`
   display: flex;
-  padding: 2rem;
+  //padding: 2rem;
   flex-direction: column;
 `
 
