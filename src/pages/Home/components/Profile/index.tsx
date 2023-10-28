@@ -15,39 +15,39 @@ import {
   faBuilding,
   faUserGroup,
 } from '@fortawesome/free-solid-svg-icons'
+import { useContext } from 'react'
+import { DataContext } from '../../../../contexts/DataContext'
 
 export function Profile() {
+  const { user } = useContext(DataContext)
+
   return (
     <ProfileContainer>
       <ProfileContent>
         <ProfileImg src="https://avatars.githubusercontent.com/u/30279343?v=4" />
         <ProfileInfo>
           <ProfileTitle>
-            <h1>Leandro Campos</h1>
-            <NavLink to={'#'}>
+            <h1>{user?.name}</h1>
+            <NavLink to={`${user?.html_url}`} target="_blank">
               github
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </NavLink>
           </ProfileTitle>
           <ProfileBio>
-            <p>
-              Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
-              viverra massa quam dignissim aenean malesuada suscipit. Nunc,
-              volutpat pulvinar vel mass.
-            </p>
+            <p>{user?.bio}</p>
           </ProfileBio>
           <ProfileData>
             <span>
               <FontAwesomeIcon icon={faGithub} />
-              camposweb
+              {user?.login}
             </span>
             <span>
               <FontAwesomeIcon icon={faBuilding} />
-              camposweb
+              {user?.company}
             </span>
             <span>
               <FontAwesomeIcon icon={faUserGroup} />
-              32 seguidores
+              {user?.followers} seguidores
             </span>
           </ProfileData>
         </ProfileInfo>

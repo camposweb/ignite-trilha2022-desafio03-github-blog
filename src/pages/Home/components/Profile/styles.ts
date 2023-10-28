@@ -36,7 +36,8 @@ export const ProfileImg = styled.img`
 `
 
 export const ProfileInfo = styled.div`
-  max-width: 38.25rem;
+  //max-width: 38.25rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
