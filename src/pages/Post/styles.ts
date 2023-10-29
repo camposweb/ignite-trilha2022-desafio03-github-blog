@@ -102,9 +102,9 @@ export const PostContent = styled.article`
   padding: 2.5rem 2rem;
 
   section {
-    p {
+    /* p {
       margin-bottom: 1rem;
-    }
+    } */
 
     code {
       display: flex;

@@ -43,7 +43,9 @@ export function Profile() {
             </span>
             <span>
               <FontAwesomeIcon icon={faBuilding} />
-              {user?.company}
+              {user?.company != null
+                ? user?.company
+                : 'sem organização vinculada'}
             </span>
             <span>
               <FontAwesomeIcon icon={faUserGroup} />

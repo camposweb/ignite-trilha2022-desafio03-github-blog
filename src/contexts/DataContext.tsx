@@ -14,14 +14,20 @@ interface UserProps {
   html_url: string
   bio: string
   login: string
-  company: string
+  company: string | null
   followers: string
 }
 
 interface IssuesProps {
   id: number
+  number: number
+  html_url: string
   title: string
   body: string
+  comments: number
+  user: {
+    login: string
+  }
 }
 
 interface DataContextType {
