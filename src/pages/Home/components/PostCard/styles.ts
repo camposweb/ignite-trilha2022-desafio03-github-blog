@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const CardContainer = styled(NavLink)`
   //width: 26rem;
-  //min-height: 16.25rem;
+  min-height: 16.25rem;
   display: flex;
   padding: 2rem;
   background: ${({ theme }) => theme.colors.basePost};
@@ -43,7 +43,7 @@ export const CardInfo = styled.section`
 `
 
 export const CardDescription = styled.p`
-  //margin-top: 1.25rem;
+  margin-top: 1.25rem;
   font-size: ${({ theme }) => theme.fonts.textM};
   color: ${({ theme }) => theme.colors.baseText};
 `

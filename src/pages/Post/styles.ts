@@ -102,13 +102,66 @@ export const PostContent = styled.article`
   padding: 2.5rem 2rem;
 
   section {
-    /* p {
-      margin-bottom: 1rem;
-    } */
+    h1 {
+      font-weight: 700;
+      line-height: 1.95rem;
+      color: ${({ theme }) => theme.colors.baseTitle};
+      font-size: ${({ theme }) => theme.fonts.titleL};
+    }
 
-    code {
+    h2 {
+      margin-top: 1rem;
+      color: ${({ theme }) => theme.colors.baseTitle};
+      font-size: ${({ theme }) => theme.fonts.titleM};
+    }
+
+    hr {
+      display: flex;
+      width: 100%;
+      height: 0.063rem;
+      background: ${({ theme }) => theme.colors.baseLabel};
+    }
+
+    ul {
       display: flex;
       flex-direction: column;
+      flex-wrap: nowrap;
+      margin-top: 1rem;
+      margin-left: 2rem;
+      li {
+        //margin-top: 1rem;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: ${({ theme }) => theme.fonts.textM};
+      color: ${({ theme }) => theme.colors.baseText};
+    }
+
+    a {
+      //display: flex;
+      //gap: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 1.2rem;
+      text-transform: uppercase;
+      color: ${({ theme }) => theme.colors.blue};
+      font-size: ${({ theme }) => theme.fonts.componentsLink};
+      box-shadow: 0 1px 0 0 ${({ theme }) => theme.colors.blue};
+      transition: 0.2s;
+    }
+
+    pre {
+      display: flex;
+      width: 100%;
+      margin-top: 1rem;
+      background: ${({ theme }) => theme.colors.basePost};
+    }
+    code {
+      //display: flex;
+      margin-top: 1rem;
+      //flex-direction: column;
       background: ${({ theme }) => theme.colors.basePost};
     }
   }

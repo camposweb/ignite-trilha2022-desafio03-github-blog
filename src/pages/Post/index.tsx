@@ -18,7 +18,6 @@ import { useContext } from 'react'
 import { DataContext } from '../../contexts/DataContext'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { useRemark, Remark } from 'react-remark'
 
 export function Post() {
   const { issues } = useContext(DataContext)
