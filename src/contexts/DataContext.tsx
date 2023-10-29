@@ -35,7 +35,8 @@ interface DataContextType {
   user?: UserProps
   issues: IssuesProps[]
   fetchUser: () => Promise<void>
-  fetchIssues: () => Promise<void>
+  fetchIssues: (query?: string) => Promise<void>
+  // searchIssues: (query?: string) => Promise<void>
 }
 
 interface DataProviderProps {
@@ -53,14 +54,32 @@ export function DataProvider({ children }: DataProviderProps) {
     setUser(response.data)
   }, [])
 
-  const fetchIssues = useCallback(async () => {
+  const fetchIssues = useCallback(async (query?: string) => {
+    if (query) {
+      const response = await api.get(
+        `search/issues?q=${query}%20repo:${import.meta.env.VITE_APP_USERNAME}/${
+          import.meta.env.VITE_APP_REPOSITORIE
+        }`,
+      )
+      setIssues(response.data.items)
+    } else {
+      const response = await api.get(
+        `repos/${import.meta.env.VITE_APP_USERNAME}/${
+          import.meta.env.VITE_APP_REPOSITORIE
+        }/issues`,
+      )
+      setIssues(response.data)
+    }
+  }, [])
+
+  /* const searchIssues = useCallback(async (query?: string) => {
     const response = await api.get(
-      `repos/${import.meta.env.VITE_APP_USERNAME}/${
+      `search/issues?q=${query}%20repo:${import.meta.env.VITE_APP_USERNAME}/${
         import.meta.env.VITE_APP_REPOSITORIE
-      }/issues`,
+      }`,
     )
     setIssues(response.data)
-  }, [])
+  }, []) */
 
   useEffect(() => {
     fetchUser()
