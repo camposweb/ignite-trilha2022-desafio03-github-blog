@@ -18,15 +18,20 @@ import { useContext } from 'react'
 import { DataContext } from '../../contexts/DataContext'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 
 export function Post() {
   const { issues } = useContext(DataContext)
   const { number } = useParams()
+
   return (
     <PostContainer>
       {issues
         .filter((issue) => issue.number === Number(number))
         .map((issue) => {
+          const date = new Date(`${issue.created_at}`)
+          const dateFormatted = formatDistanceToNow(date, { locale: ptBR })
           return (
             <>
               <PostInfoContainer key={issue.id}>
@@ -49,7 +54,7 @@ export function Post() {
                     </span>
                     <span>
                       <FontAwesomeIcon icon={faCalendarDay} />
-                      Há 1 dia
+                      {`Há ${dateFormatted.split('cerca de').slice(-1)}`}
                     </span>
                     <span>
                       <FontAwesomeIcon icon={faComment} />
