@@ -98,7 +98,7 @@ export const ProfileBio = styled.section`
     color: ${({ theme }) => theme.colors.baseText};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 751px) {
     justify-content: center;
     p {
     }

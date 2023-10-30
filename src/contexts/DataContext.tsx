@@ -36,7 +36,6 @@ interface DataContextType {
   issues: IssuesProps[]
   fetchUser: () => Promise<void>
   fetchIssues: (query?: string) => Promise<void>
-  // searchIssues: (query?: string) => Promise<void>
 }
 
 interface DataProviderProps {
@@ -71,15 +70,6 @@ export function DataProvider({ children }: DataProviderProps) {
       setIssues(response.data)
     }
   }, [])
-
-  /* const searchIssues = useCallback(async (query?: string) => {
-    const response = await api.get(
-      `search/issues?q=${query}%20repo:${import.meta.env.VITE_APP_USERNAME}/${
-        import.meta.env.VITE_APP_REPOSITORIE
-      }`,
-    )
-    setIssues(response.data)
-  }, []) */
 
   useEffect(() => {
     fetchUser()

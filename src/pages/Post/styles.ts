@@ -154,15 +154,30 @@ export const PostContent = styled.article`
 
     pre {
       display: flex;
-      width: 100%;
+      flex-direction: column;
       margin-top: 1rem;
       background: ${({ theme }) => theme.colors.basePost};
+
+      code {
+        flex-direction: column;
+        padding: 1rem 0;
+        background: ${({ theme }) => theme.colors.basePost};
+        overflow-x: auto;
+      }
     }
     code {
-      //display: flex;
-      margin-top: 1rem;
-      //flex-direction: column;
+      //margin-top: 1rem;
+      padding: 0.063rem;
       background: ${({ theme }) => theme.colors.basePost};
+    }
+  }
+
+  @media (max-width: 768px) {
+    section {
+      pre {
+      }
+      code {
+      }
     }
   }
 `
