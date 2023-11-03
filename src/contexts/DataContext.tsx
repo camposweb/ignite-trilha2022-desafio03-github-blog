@@ -7,7 +7,7 @@ import {
 } from 'react'
 import { api } from '../lib/axios'
 
-interface UserProps {
+export interface UserProps {
   id: number
   avatar_url: string
   name: string
@@ -15,7 +15,7 @@ interface UserProps {
   bio: string
   login: string
   company: string | null
-  followers: string
+  followers: number
 }
 
 interface IssuesProps {

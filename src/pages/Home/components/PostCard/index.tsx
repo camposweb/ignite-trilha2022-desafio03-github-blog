@@ -19,6 +19,7 @@ interface CardProps {
 export function PostCard({ cards }: CardProps) {
   const date = new Date(`${cards.created_at}`)
   const dateFormatted = formatDistanceToNow(date, { locale: ptBR })
+
   return (
     <CardContainer to={`/post/${cards.number}`}>
       <CardContent>

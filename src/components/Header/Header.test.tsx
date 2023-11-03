@@ -3,7 +3,18 @@ import { Header } from '.'
 import { render, screen } from '../../utils/test-utils'
 
 describe('render Header components', () => {
-  it('should render', () => {
+  it('should render the Header component', () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>,
+    )
+
+    expect(screen.getByAltText('Logo')).toBeInTheDocument()
+    expect(screen.getByTitle('Home')).toBeInTheDocument()
+  })
+
+  it('should render the attributes', () => {
     render(
       <BrowserRouter>
         <Header />
