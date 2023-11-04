@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom'
-import { render, screen } from '../../utils/test-utils'
+import { render } from '../../utils/test-utils'
 import { DefaultLayout } from '.'
 
 describe('', () => {

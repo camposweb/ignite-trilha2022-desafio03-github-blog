@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
-interface IssuesProps {
+export interface IssuesProps {
   id?: number
   number: number
   title: string
@@ -29,9 +29,11 @@ export function PostCard({ cards }: CardProps) {
               ? `${cards.title.substring(0, 70)}...`
               : `${cards.title}`}
           </h3>
-          <span>{`Há ${dateFormatted.split('cerca de').slice(-1)}`}</span>
+          <span data-testid="span">{`Há ${dateFormatted
+            .split('cerca de')
+            .slice(-1)}`}</span>
         </CardInfo>
-        <CardDescription>
+        <CardDescription data-testid="description">
           <Markdown remarkPlugins={[remarkGfm]}>{`${cards.body.substring(
             5,
             190,
