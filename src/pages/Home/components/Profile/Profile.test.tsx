@@ -1,5 +1,4 @@
 import { BrowserRouter, NavLink } from 'react-router-dom'
-import { Profile } from '.'
 import { render, screen } from '../../../../utils/test-utils'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from '../../../../styles/themes/default'
@@ -47,7 +46,7 @@ describe('render Profile components', () => {
                     github
                     <FontAwesomeIcon
                       icon={faArrowUpRightFromSquare}
-                      title="svg-01"
+                      title="svg-link"
                     />
                   </NavLink>
                 </ProfileTitle>
@@ -56,17 +55,17 @@ describe('render Profile components', () => {
                 </ProfileBio>
                 <ProfileData>
                   <span>
-                    <FontAwesomeIcon icon={faGithub} title="svg-02" />
+                    <FontAwesomeIcon icon={faGithub} title="svg-github" />
                     {user?.login}
                   </span>
                   <span>
-                    <FontAwesomeIcon icon={faBuilding} />
+                    <FontAwesomeIcon icon={faBuilding} title="svg-company" />
                     {user?.company != null
                       ? user?.company
                       : 'sem organização vinculada'}
                   </span>
                   <span>
-                    <FontAwesomeIcon icon={faUserGroup} />
+                    <FontAwesomeIcon icon={faUserGroup} title="svg-followers" />
                     {user?.followers} seguidores
                   </span>
                 </ProfileData>
@@ -76,16 +75,18 @@ describe('render Profile components', () => {
         </BrowserRouter>
       </ThemeProvider>,
     )
-    // const p = screen.getByRole('paragraph')
-    // expect(screen.findAllByRole('img')).toBeInTheDocument()
+
     expect(screen.getByTestId('profile')).toBeInTheDocument()
     expect(screen.getByAltText('Image Profile')).toBeInTheDocument()
 
     expect(screen.getByText('Leandro Campos')).toBeInTheDocument()
     expect(screen.getByRole('link')).toBeInTheDocument()
-    expect(screen.getByTitle('svg-01')).toBeInTheDocument()
-    expect(screen.getByTitle('svg-02')).toBeInTheDocument()
-    // expect(screen).toBe('Frontend Developer')
     expect(screen.getByText('Frontend Developer')).toBeInTheDocument()
+    expect(screen.getByTitle('svg-github')).toBeInTheDocument()
+    expect(screen.getByText('camposweb')).toBeInTheDocument()
+    expect(screen.getByTitle('svg-company')).toBeInTheDocument()
+    expect(screen.getByText('sem organização vinculada')).toBeInTheDocument()
+    expect(screen.getByTitle('svg-followers')).toBeInTheDocument()
+    expect(screen.getByText('0 seguidores')).toBeInTheDocument()
   })
 })
