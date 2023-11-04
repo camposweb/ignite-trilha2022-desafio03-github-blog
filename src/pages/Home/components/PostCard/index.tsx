@@ -21,7 +21,7 @@ export function PostCard({ cards }: CardProps) {
   const dateFormatted = formatDistanceToNow(date, { locale: ptBR })
 
   return (
-    <CardContainer to={`/post/${cards.number}`}>
+    <CardContainer to={`/post/${cards.number}`} data-testid="container">
       <CardContent>
         <CardInfo>
           <h3>
@@ -33,7 +33,7 @@ export function PostCard({ cards }: CardProps) {
             .split('cerca de')
             .slice(-1)}`}</span>
         </CardInfo>
-        <CardDescription data-testid="description">
+        <CardDescription role="paragraph">
           <Markdown remarkPlugins={[remarkGfm]}>{`${cards.body.substring(
             5,
             190,

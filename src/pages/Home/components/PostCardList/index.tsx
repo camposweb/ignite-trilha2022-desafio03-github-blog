@@ -6,10 +6,11 @@ import { DataContext } from '../../../../contexts/DataContext'
 export function PostCardList() {
   const { issues } = useContext(DataContext)
   return (
-    <PostCardListContainer>
-      {issues.map((issue) => {
-        return <PostCard key={issue.id} cards={issue} />
-      })}
+    <PostCardListContainer data-testid="container">
+      {issues &&
+        issues.map((issue) => {
+          return <PostCard key={issue.id} cards={issue} />
+        })}
     </PostCardListContainer>
   )
 }

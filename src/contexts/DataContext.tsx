@@ -18,7 +18,7 @@ export interface UserProps {
   followers: number
 }
 
-interface IssuesProps {
+export interface IssuesProps {
   id: number
   number: number
   html_url: string

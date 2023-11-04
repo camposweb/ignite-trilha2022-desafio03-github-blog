@@ -21,10 +21,11 @@ describe('render PostCard components', () => {
         </BrowserRouter>
       </ThemeProvider>,
     )
+    expect(screen.getByTestId('container')).toBeVisible()
     expect(screen.getByRole('link')).toBeInTheDocument()
     expect(screen.getByTestId('span')).toBeInTheDocument()
     expect(screen.getByRole('heading')).toBeInTheDocument()
-    expect(screen.getByTestId('description')).toBeInTheDocument()
+    expect(screen.getByRole('paragraph')).toBeInTheDocument()
   })
 
   it('render value', () => {
