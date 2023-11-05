@@ -21,7 +21,7 @@ describe('render PostCard components', () => {
         </BrowserRouter>
       </ThemeProvider>,
     )
-    expect(screen.getByTestId('container')).toBeVisible()
+    expect(screen.getByTestId('container-cardContainer')).toBeVisible()
     expect(screen.getByRole('link')).toBeInTheDocument()
     expect(screen.getByTestId('span')).toBeInTheDocument()
     expect(screen.getByRole('heading')).toBeInTheDocument()

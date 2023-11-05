@@ -6,7 +6,7 @@ import { DataContext } from '../../../../contexts/DataContext'
 export function PostCardList() {
   const { issues } = useContext(DataContext)
   return (
-    <PostCardListContainer data-testid="container">
+    <PostCardListContainer data-testid="container-postCardList">
       {issues &&
         issues.map((issue) => {
           return <PostCard key={issue.id} cards={issue} />

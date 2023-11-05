@@ -5,7 +5,7 @@ import { HomeContainer } from './styles'
 
 export function Home() {
   return (
-    <HomeContainer>
+    <HomeContainer data-testid="container-home">
       <Profile />
       <SearchForm />
       <PostCardList />

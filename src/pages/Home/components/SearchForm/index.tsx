@@ -31,9 +31,9 @@ export function SearchForm() {
       <SearchInfo>
         <h3>Publicações</h3>
         <span>
-          {issues.length > 1
-            ? `${issues.length} publicações`
-            : `${issues.length} publicação`}
+          {issues && issues.length > 1
+            ? `${issues && issues.length} publicações`
+            : `${issues && issues.length} publicação`}
         </span>
       </SearchInfo>
       <SearchFormInput onSubmit={handleSubmit(handleSearchIssues)}>

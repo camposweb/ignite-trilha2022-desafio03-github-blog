@@ -14,7 +14,7 @@ describe('render PostCard components', () => {
       </ThemeProvider>,
     )
 
-    expect(screen.getByTestId('container')).toBeVisible()
-    expect(screen.getByTestId('container')).toBeInTheDocument()
+    expect(screen.getByTestId('container-postCardList')).toBeVisible()
+    expect(screen.getByTestId('container-postCardList')).toBeInTheDocument()
   })
 })
