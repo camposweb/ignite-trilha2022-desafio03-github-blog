@@ -27,7 +27,7 @@ export function SearchForm() {
   }
 
   return (
-    <SearchFormContainer>
+    <SearchFormContainer data-testid="container-searchForm">
       <SearchInfo>
         <h3>Publicações</h3>
         <span>

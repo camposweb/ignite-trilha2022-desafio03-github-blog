@@ -4,7 +4,7 @@ import { render, screen } from '../../../../utils/test-utils'
 import { defaultTheme } from '../../../../styles/themes/default'
 import { BrowserRouter } from 'react-router-dom'
 
-describe('render PostCard components', () => {
+describe('render PostCardList components', () => {
   it('should render', () => {
     render(
       <ThemeProvider theme={defaultTheme}>

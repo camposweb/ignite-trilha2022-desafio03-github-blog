@@ -4,7 +4,7 @@ import { LayoutContainer } from './styles'
 
 export function DefaultLayout() {
   return (
-    <LayoutContainer>
+    <LayoutContainer data-testid="container-defaultLayout">
       <Header />
       <Outlet />
     </LayoutContainer>
