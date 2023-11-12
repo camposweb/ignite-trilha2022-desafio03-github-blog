@@ -24,7 +24,7 @@ export function Profile() {
   return (
     <ProfileContainer>
       <ProfileContent>
-        <ProfileImg src={`${user?.avatar_url}`} />
+        <ProfileImg src={`${user?.avatar_url}`} alt="profile" />
         <ProfileInfo>
           <ProfileTitle>
             <h1>{user?.name}</h1>

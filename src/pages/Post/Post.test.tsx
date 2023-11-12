@@ -16,5 +16,9 @@ describe('render Home component', () => {
 
     expect(screen.getByTestId('container-postContainer')).toBeInTheDocument()
     expect(screen.getByTestId('container-postContainer')).toBeVisible()
+
+    /* expect(screen.getByTestId('container-postContainer')).toMatchObject(
+      'voltar',
+    ) */
   })
 })
