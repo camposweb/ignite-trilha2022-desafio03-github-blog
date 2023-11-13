@@ -63,6 +63,7 @@ yarn install
 yarn dev
 ```
 
-
+## A aplicação está hospedada na Vercel
+[https://ignite-trilha2022-desafio03-github-blog.vercel.app/](https://ignite-trilha2022-desafio03-github-blog.vercel.app/)
 
 
